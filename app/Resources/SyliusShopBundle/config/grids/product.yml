@@ -1,0 +1,32 @@
+# This file is part of the Sylius package.
+# (c) Paweł Jędrzejewski
+
+sylius_grid:
+    grids:
+        sylius_shop_product:
+            driver:
+                name: doctrine/orm
+                options:
+                    class: "%sylius.model.product.class%"
+                    repository:
+                        method: createQueryBuilderByChannelAndTaxonSlug
+                        arguments:
+                            channel: "expr:service('sylius.context.channel').getChannel()"
+                            taxonId: $slug
+                            locale: '%locale%'
+            sorting:
+                position: asc
+            fields:
+                createdAt:
+                    type: datetime
+                    sortable: ~
+                position:
+                    type: string 
+                    sortable: productTaxon.position
+            filters:
+                search:
+                    type: string
+                    label: false
+                    options:
+                        type: contains
+                        fields: [translation.name]
