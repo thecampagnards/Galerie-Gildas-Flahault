@@ -1,0 +1,29 @@
+{% extends '@SyliusAdmin/layout.html.twig' %}
+
+{% import 'SyliusUiBundle:Macro:headers.html.twig' as headers %}
+
+{% set header = 'sylius.ui.generate_coupons' %}
+
+{% block title %}{{ parent() }} {{ header|trans }}{% endblock %}
+
+{% form_theme form 'SyliusUiBundle:Form:theme.html.twig' %}
+
+{% block content %}
+{{ headers.default(header|trans, 'random', 'sylius.ui.manage_discounts_and_promotional_campaigns'|trans) }}
+
+{% include '@SyliusAdmin/PromotionCoupon/Generate/_breadcrumb.html.twig' %}
+
+{{ form_start(form, {'action': path('sylius_admin_promotion_coupon_generate', {'promotionId': promotion.id}), 'attr': {'class': 'ui loadable form', 'novalidate': 'novalidate'}}) }}
+<div class="ui segment">
+    {% include '@SyliusAdmin/PromotionCoupon/Generate/_form.html.twig' %}
+    <div class="ui basic segment">
+        <div class="ui buttons">
+            <button class="ui labeled icon primary button" type="submit"><i class="random icon"></i>{{- 'sylius.ui.generate'|trans -}}</button>
+            <div class="or" data-text="{{ 'sylius.ui.or'|trans }}"></div>
+            {% include '@SyliusUi/Form/Buttons/_cancel.html.twig' with {'path': path(configuration.getRouteName('index'), {'promotionId': promotion.id})} %}
+        </div>
+    </div>
+</div>
+{{ form_row(form._token) }}
+{{ form_end(form, {'render_rest': false}) }}
+{% endblock %}
