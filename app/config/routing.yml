@@ -18,3 +18,9 @@ sylius_admin:
 sylius_api:
     resource: "@SyliusApiBundle/Resources/config/routing/main.yml"
     prefix: /api
+
+app_actualite:
+    path: /actualite
+    methods: [GET]
+    defaults:
+        _controller: AppBundle:Default:actualite
