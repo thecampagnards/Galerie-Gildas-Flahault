@@ -1,4 +1,11 @@
+<div class="ui left stackable inverted menu">
+        <a href="{{ url("sylius_shop_homepage") }}" class="item">Acceuil</a>
+        <a href="" class="item">Galerie</a>
+        <a href="" class="item">Actualité</a>
+</div>
+
 <div class="ui right stackable inverted menu">
+    {{ render(url('sylius_shop_partial_cart_summary', {'template': '@SyliusShop/Cart/_widget.html.twig'})) }}
     {% if is_granted('ROLE_USER') %}
         <div class="item">{{ 'sylius.ui.hello'|trans }} {{ app.user.customer.fullName }}!</div>
         <a href="{{ path('sylius_shop_account_dashboard') }}" class="item">{{ 'sylius.ui.my_account'|trans }}</a>

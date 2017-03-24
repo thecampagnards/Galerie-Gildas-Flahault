@@ -1,9 +1,16 @@
 {% extends '@SyliusShop/layout.html.twig' %}
 
 {% block content %}
-<h2 class="ui horizontal section divider header">
-    {{ 'sylius.ui.latest_products'|trans }}
-</h2>
+<div id="intro">
+    <img src="{{ asset('images/signature-gildas-flahault.png') }}" alt="Signature Gildas Flahault" class="signature" style="width: 100%;">
+    <div class="text">
+        <h1>
+            Dans cette galerie,offrez-vous une reproduction fidèle d'une peinture de Gildas Flahault
+            <a href="">Acceder à la galerie</a>
+        </h1>
+    </div>
+    <div class="photo"><img src="{{ asset('images/photo-gildas-flahault.jpg') }}" alt="Photo Gildas Flahault" class="photo"></div>
+</div>
 
-{{ render(url('sylius_shop_partial_product_index_latest', {'count': 4, 'template': '@SyliusShop/Product/_horizontalList.html.twig'})) }}
+{# render(url('sylius_shop_partial_product_index_latest', {'count': 4, 'template': '@SyliusShop/Product/_horizontalList.html.twig'})) #}
 {% endblock %}
