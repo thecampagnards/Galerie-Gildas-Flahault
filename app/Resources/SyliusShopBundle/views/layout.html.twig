@@ -12,6 +12,8 @@
     {% block metatags %}
     {% endblock %}
 
+    {% include '@SyliusUi/_stylesheets.html.twig' with {'path': 'css/main.css'} %}
+
     {% block stylesheets %}
         {% include '@SyliusUi/_stylesheets.html.twig' with {'path': 'assets/shop/css/style.css'} %}
     {% endblock %}
