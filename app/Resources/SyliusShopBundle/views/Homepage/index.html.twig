@@ -2,14 +2,16 @@
 
 {% block content %}
 <div id="intro">
-    <img src="{{ asset('images/signature-gildas-flahault.png') }}" alt="Signature Gildas Flahault" class="signature" style="width: 100%;">
-    <div class="text">
-        <h1>
-            Dans cette galerie,offrez-vous une reproduction fidèle d'une peinture de Gildas Flahault
-            <a href="{{ url('sylius_shop_product_index', { slug: 'galerie'} ) }}">Acceder à la galerie</a>
-        </h1>
+    <img src="{{ asset('images/signature-gildas-flahault.png') }}" alt="Signature Gildas Flahault" class="signature">
+    <div id="sous-intro">
+        <div class="text">
+            <h1>
+                Dans cette galerie, offrez-vous une reproduction fidèle d'une peinture de Gildas Flahault
+                <a href="{{ url('sylius_shop_product_index', { slug: 'galerie'} ) }}">Acceder à la galerie</a>
+            </h1>
+        </div>
+        <div class="photo"><img src="{{ asset('images/photo-gildas-flahault.jpg') }}" alt="Photo Gildas Flahault" class="photo"></div>
     </div>
-    <div class="photo"><img src="{{ asset('images/photo-gildas-flahault.jpg') }}" alt="Photo Gildas Flahault" class="photo"></div>
 </div>
 
 {# render(url('sylius_shop_partial_product_index_latest', {'count': 4, 'template': '@SyliusShop/Product/_horizontalList.html.twig'})) #}
