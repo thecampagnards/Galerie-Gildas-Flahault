@@ -1,3 +1,4 @@
+@import "_font-awesome.scss";
 @import "_variables.scss";
 
 #intro {
@@ -20,14 +21,24 @@
     }
 
     h1 {
-      font-size: 2.8em;
+      font-size: 2.2em;
       text-transform: uppercase;
+    }
+
+    a {
+      font-size: 2.2em;
+      line-height: 1em;
+      text-transform: uppercase;
+    }
+
+    small {
+      font-size: 1em;
     }
   }
 
   .text {
-    align-self: center;
-    width: 44%;
+    align-self: flex-end;
+    width: 34%;
 
     a {
       display: block;
@@ -36,7 +47,7 @@
   }
 
   div.photo {
-    width: 55%;
+    width: 65%;
   }
 }
 
