@@ -12,7 +12,7 @@
 {% endif %}
 
 <a href="{{ original_path }}" class="ui fluid image" data-lightbox="sylius-product-image">
-    <img src="{{ path }}" id="main-image" alt="" />
+    <img src="{{ path }}" id="main-image" alt="{{ product.images.first.code }}" title="Cliquez pour agrandir"/>
 </a>
 {% if product.images|length > 1 %}
 <div class="ui divider"></div>
@@ -20,7 +20,7 @@
     {% for image in product.images %}
     {% set path = image.path is not null ? image.path|imagine_filter('sylius_shop_product_small_thumbnail') : 'http://placehold.it/200x200' %}
     <a href="{{ image.path|imagine_filter('sylius_shop_product_original') }}" class="ui image" data-lightbox="sylius-product-image">
-        <img src="{{ path }}" />{{ image.code|replace('-', ' ') }}
+        <img src="{{ path }}" title="Cliquez pour agrandir" alt="{{ image.code }}"/>{{ image.code|replace('-', ' ') }}
     </a>
     {% endfor %}
 </div>
