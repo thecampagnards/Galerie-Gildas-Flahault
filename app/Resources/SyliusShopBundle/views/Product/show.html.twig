@@ -23,7 +23,6 @@
         </div>
         <div class="ui basic segment">
             <p>{{ product.shortDescription }}</p>
-            {{ dump(product.images) }}
         </div>
         {% if product.isConfigurable() and product.getVariantSelectionMethod() == 'match' and not product.variants.empty() %}
             {% include '@SyliusShop/Product/Show/_variantsPricing.html.twig' with {'pricing': sylius_product_variant_prices(product, sylius.channel)} %}

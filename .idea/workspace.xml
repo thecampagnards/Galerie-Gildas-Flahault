@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94c72d0b-ed12-494c-b739-b51199d40a5d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/SyliusShopBundle/views/Product/Show/_images.html.twig" afterPath="$PROJECT_DIR$/app/Resources/SyliusShopBundle/views/Product/Show/_images.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/SyliusShopBundle/views/Product/_mainImage.html.twig" afterPath="$PROJECT_DIR$/app/Resources/SyliusShopBundle/views/Product/_mainImage.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/SyliusShopBundle/views/Product/show.html.twig" afterPath="$PROJECT_DIR$/app/Resources/SyliusShopBundle/views/Product/show.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,7 +37,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_images.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_images.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/SyliusShopBundle/views/Product/Show/_images.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
@@ -100,11 +97,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="false">
+      <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Resources/SyliusShopBundle/views/Product/show.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="25" column="34" lean-forward="false" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+            <state relative-caret-position="357">
+              <caret line="24" column="49" lean-forward="false" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -170,8 +167,8 @@
         <option value="$PROJECT_DIR$/vendor/sylius/sylius/src/Sylius/Bundle/UiBundle/Resources/translations/messages.fr.yml" />
         <option value="$PROJECT_DIR$/app/Resources/SyliusShopBundle/views/Homepage/index.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/SyliusShopBundle/views/Product/_mainImage.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/SyliusShopBundle/views/Product/show.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/SyliusShopBundle/views/Product/Show/_images.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/SyliusShopBundle/views/Product/show.html.twig" />
       </list>
     </option>
   </component>
@@ -583,12 +580,12 @@
       <workItem from="1491202498557" duration="616000" />
       <workItem from="1493388540787" duration="2000" />
       <workItem from="1493388550937" duration="5073000" />
-      <workItem from="1493798873459" duration="7087000" />
+      <workItem from="1493798873459" duration="7267000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26552000" />
+    <option name="totallyTimeSpent" value="26732000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -996,18 +993,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/SyliusShopBundle/views/Product/show.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="25" column="34" lean-forward="false" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/SyliusShopBundle/views/Product/Show/_images.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="60" lean-forward="false" selection-start-line="22" selection-start-column="60" selection-end-line="22" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/SyliusShopBundle/views/Product/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="24" column="49" lean-forward="false" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
           <folding />
         </state>
       </provider>
