@@ -10,7 +10,7 @@
     </div>
     <div class="column">
         {% include '@SyliusShop/Product/Show/_header.html.twig' %}
-        {% include '@SyliusShop/Product/Show/_reviews.html.twig' %}
+        {# include '@SyliusShop/Product/Show/_reviews.html.twig' #}
         <div class="ui stackable grid">
             <div class="four wide column">
                 {% if not product.variants.empty() %}
@@ -18,7 +18,7 @@
                 {% endif %}
             </div>
             <div class="twelve wide right aligned column">
-                <span class="ui sub header">{{ product.code }}</span>
+                {# <span class="ui sub header">{{ product.code }}</span> #}
             </div>
         </div>
         <div class="ui basic segment">
