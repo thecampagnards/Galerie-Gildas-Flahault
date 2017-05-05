@@ -54,3 +54,24 @@
 #menu > div.menu > div.cart > div.list .item{
   color: inherit;
 }
+
+.desc-cadre, .desc-livraison {
+  margin-top: 30px;
+  padding-bottom: 30px;
+
+  h2 {
+
+  }
+
+  img {
+    width: 100%;
+  }
+
+  p {
+    display: inline-block;
+  }
+}
+
+.desc-cadre {
+  border-bottom: 1px solid rgba(34,36,38,.15);
+}
