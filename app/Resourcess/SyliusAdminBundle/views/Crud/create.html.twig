@@ -1,0 +1,14 @@
+{% extends 'SyliusAdminBundle::layout.html.twig' %}
+
+{% import 'SyliusUiBundle:Macro:headers.html.twig' as headers %}
+
+{% set header = configuration.vars.header|default(metadata.applicationName~'.ui.new_'~metadata.name) %}
+
+{% block title %}{{ parent() }} {{ header|trans }}{% endblock %}
+
+{% form_theme form 'SyliusUiBundle:Form:theme.html.twig' %}
+
+{% block content %}
+{% include '@SyliusAdmin/Crud/Create/_header.html.twig' %}
+{% include '@SyliusAdmin/Crud/Create/_content.html.twig' %}
+{% endblock %}

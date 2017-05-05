@@ -1,4 +1,6 @@
 imports:
+    - { resource: "@SyliusAdminBundle/Resources/config/app/sylius/sylius_mailer.yml" }
+    - { resource: "@SyliusAdminBundle/Resources/config/grids/address_log_entry.yml" }
     - { resource: "@SyliusAdminBundle/Resources/config/grids/admin_user.yml" }
     - { resource: "@SyliusAdminBundle/Resources/config/grids/channel.yml" }
     - { resource: "@SyliusAdminBundle/Resources/config/grids/country.yml" }
@@ -7,6 +9,7 @@ imports:
     - { resource: "@SyliusAdminBundle/Resources/config/grids/customer_group.yml" }
     - { resource: "@SyliusAdminBundle/Resources/config/grids/customer_order.yml" }
     - { resource: "@SyliusAdminBundle/Resources/config/grids/exchange_rate.yml" }
+    - { resource: "@SyliusAdminBundle/Resources/config/grids/inventory.yml" }
     - { resource: "@SyliusAdminBundle/Resources/config/grids/locale.yml" }
     - { resource: "@SyliusAdminBundle/Resources/config/grids/order.yml" }
     - { resource: "@SyliusAdminBundle/Resources/config/grids/payment_method.yml" }
@@ -26,13 +29,7 @@ imports:
     - { resource: "@SyliusAdminBundle/Resources/config/grids/taxon.yml" }
     - { resource: "@SyliusAdminBundle/Resources/config/grids/zone.yml" }
 
-sylius_resource:
-    drivers:
-        - doctrine/orm
-
 sylius_grid:
-    drivers:
-        - doctrine/orm
     templates:
         action:
             default: "@SyliusUi/Grid/Action/default.html.twig"
@@ -42,13 +39,20 @@ sylius_grid:
             update: "@SyliusUi/Grid/Action/update.html.twig"
             apply_transition: "@SyliusUi/Grid/Action/applyTransition.html.twig"
             links: "@SyliusUi/Grid/Action/links.html.twig"
+            archive: "@SyliusUi/Grid/Action/archive.html.twig"
 
+            create_payment_method: "@SyliusAdmin/PaymentMethod/Grid/Action/create.html.twig"
             create_product_attribute: "@SyliusAdmin/ProductAttribute/Grid/Action/create.html.twig"
-            update_product_positions: "@SyliusAdmin/Product/Grid/Action/updatePositions.html.twig"
             generate_variants: "@SyliusAdmin/Product/Grid/Action/generateVariants.html.twig"
+            update_product_positions: "@SyliusAdmin/Product/Grid/Action/updatePositions.html.twig"
+            update_product_variant_positions: "@SyliusAdmin/ProductVariant/Grid/Action/updatePositions.html.twig"
         filter:
             string: "@SyliusUi/Grid/Filter/string.html.twig"
             boolean: "@SyliusUi/Grid/Filter/boolean.html.twig"
+            date: "@SyliusUi/Grid/Filter/date.html.twig"
+            entity: "@SyliusUi/Grid/Filter/entity.html.twig"
+            money: "@SyliusUi/Grid/Filter/money.html.twig"
+            exists: "@SyliusUi/Grid/Filter/exists.html.twig"
 
 liip_imagine:
     filter_sets:
@@ -58,3 +62,6 @@ liip_imagine:
         sylius_admin_product_thumbnail:
             filters:
                 thumbnail: { size: [50, 50], mode: outbound }
+
+sonata_block:
+    default_contexts: ~

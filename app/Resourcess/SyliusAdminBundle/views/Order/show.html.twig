@@ -1,0 +1,33 @@
+{% extends 'SyliusAdminBundle::layout.html.twig' %}
+
+{% import '@SyliusUi/Macro/labels.html.twig' as label %}
+
+{% block title %}{{ parent() }} {{ 'sylius.ui.order'|trans ~' #'~ order.number }}{% endblock %}
+
+{% set customer = order.customer %}
+
+{% block content %}
+<div class="ui stackable two column grid">
+    <div class="twelve wide column">
+        {% include '@SyliusAdmin/Order/Show/_header.html.twig' %}
+    </div>
+    <div class="four wide right aligned column">
+        {% include '@SyliusAdmin/Order/Show/_actions.html.twig' %}
+    </div>
+</div>
+{% include '@SyliusAdmin/Order/Show/_breadcrumb.html.twig' %}
+<div class="ui stackable grid">
+    <div class="twelve wide column">
+        <div class="ui segment">
+            {% include '@SyliusAdmin/Order/Show/_summary.html.twig' %}
+        </div>
+        {% include '@SyliusAdmin/Order/Show/_notes.html.twig' %}
+    </div>
+    <div class="four wide column">
+        {% include '@SyliusAdmin/Order/Show/_customer.html.twig' %}
+        {% include '@SyliusAdmin/Order/Show/_addresses.html.twig' %}
+        {% include '@SyliusAdmin/Order/Show/_payments.html.twig' %}
+        {% include '@SyliusAdmin/Order/Show/_shipments.html.twig' %}
+    </div>
+</div>
+{% endblock %}

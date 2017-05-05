@@ -9,7 +9,7 @@
             </div>
             {{ form_row(form.description) }}
             {{ form_row(form.enabled) }}
-            <div class="three fields">
+            <div class="two fields">
                 <div class="field">
                     {{ form_label(form.hostname) }}
                     <div class="ui labeled input">
@@ -18,6 +18,9 @@
                     </div>
                     {{ form_errors(form.hostname) }}
                 </div>
+                {{ form_row(form.contactEmail) }}
+            </div>
+            <div class="two fields">
                 {{ form_row(form.color) }}
                 {{ form_row(form.themeName) }}
             </div>
@@ -31,6 +34,9 @@
             {{ form_row(form.baseCurrency) }}
             {{ form_row(form.defaultTaxZone) }}
             {{ form_row(form.taxCalculationStrategy) }}
+            {{ form_row(form.skippingShippingStepAllowed) }}
+            {{ form_row(form.skippingPaymentStepAllowed) }}
+            {{ form_row(form.accountVerificationRequired) }}
         </div>
     </div>
 </div>

@@ -11,6 +11,7 @@ sylius_shop_partial:
 
 sylius_shop_homepage:
     path: /
+    methods: [GET]
     defaults:
         _controller: sylius.controller.shop.homepage:indexAction
 
@@ -35,6 +36,10 @@ sylius_shop_checkout:
     resource: "@SyliusShopBundle/Resources/config/routing/checkout.yml"
     prefix: /checkout
 
+sylius_shop_contact_request:
+    resource: "@SyliusShopBundle/Resources/config/routing/contact.yml"
+    prefix: /contact
+
 sylius_shop_order:
     resource: "@SyliusShopBundle/Resources/config/routing/order.yml"
     prefix: /order
@@ -43,16 +48,15 @@ sylius_shop_account:
     resource: "@SyliusShopBundle/Resources/config/routing/account.yml"
     prefix: /account
 
-sylius_shop_payum:
-    resource: "@SyliusShopBundle/Resources/config/routing/payum.yml"
-
 sylius_shop_switch_currency:
     path: /switch-currency/{code}
+    methods: [GET]
     defaults:
         _controller: sylius.controller.shop.currency_switch:switchAction
 
 sylius_shop_switch_locale:
     path: /switch-locale/{code}
+    methods: [GET]
     defaults:
         _controller: sylius.controller.shop.locale_switch:switchAction
 

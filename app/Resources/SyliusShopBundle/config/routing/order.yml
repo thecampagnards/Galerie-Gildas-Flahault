@@ -20,7 +20,7 @@ sylius_shop_order_pay:
 
 sylius_shop_order_after_pay:
     path: /after-pay
-    methods: [GET]
+    methods: [GET, POST]
     defaults:
         _controller: sylius.controller.payum:afterCaptureAction
 
@@ -34,7 +34,10 @@ sylius_shop_order_show:
             repository:
                 method: findOneBy
                 arguments: [tokenValue: $tokenValue]
-            form: Sylius\Bundle\CoreBundle\Form\Type\Checkout\SelectPaymentType
+            form:
+                type: Sylius\Bundle\CoreBundle\Form\Type\Checkout\SelectPaymentType
+                options:
+                    validation_groups: []
             redirect:
                 route: sylius_shop_order_pay
                 parameters:

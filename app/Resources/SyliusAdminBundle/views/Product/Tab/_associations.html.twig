@@ -3,7 +3,7 @@
 
     {% for associationForm in form.associations %}
         <div class="field">
-            {{ form_label(associationForm) }}
+            {{- form_label(associationForm) -}}
             <div class="product-select ui fluid multiple search selection dropdown" data-url="{{ path('sylius_admin_ajax_product_index') }}">
                 {{ form_widget(associationForm, {'attr': {'class' : 'autocomplete'}}) }}
                 <i class="dropdown icon"></i>
@@ -12,12 +12,15 @@
                     {% for association in product.associations %}
                         {% if association.type.code == associationForm.vars.name %}
                             {% for associatedProduct in association.associatedProducts %}
-                                <div class="item" data-value="{{ associatedProduct.id }}">{{ associatedProduct.name }}</div>
+                                <div class="item" data-value="{{ associatedProduct.code }}">{{ associatedProduct.name|default(associatedProduct.code) }}</div>
                             {% endfor %}
                         {% endif %}
                     {% endfor %}
                 </div>
             </div>
+            {{ form_errors(associationForm) }}
         </div>
     {% endfor %}
+
+    {{ sonata_block_render_event('sylius.admin.product.' ~ action ~ '.tab_associations', {'form': form}) }}
 </div>

@@ -1,4 +1,6 @@
 <div class="ui bottom attached tab segment active" data-tab="details">
+    {{ sonata_block_render_event('sylius.shop.product.show.tab_details', {'product': product}) }}
+
     {% if product.description is not empty %}
         {{ product.description }}
     {% else %}
@@ -15,5 +17,5 @@
         <h2>Livraison</h2>
         <p>La livraison ne se fait qu'en <b>France Métropolitaine</b>. Le colis est emballé dans xx-MACHIN-xx. En général, la livraison se fait sous xx jours.</p>
     </div>
-</div>
 
+</div>

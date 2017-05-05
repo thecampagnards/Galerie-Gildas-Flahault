@@ -1,0 +1,13 @@
+{% extends 'SyliusAdminBundle::layout.html.twig' %}
+
+{% import '@SyliusUi/Macro/labels.html.twig' as label %}
+{% import '@SyliusUi/Macro/buttons.html.twig' as buttons %}
+
+{% block title %}{{ parent() }} {{ 'sylius.ui.customer'|trans ~' '~ customer.email }}{% endblock %}
+
+{% block content %}
+    {% include '@SyliusAdmin/Customer/Show/_header.html.twig' %}
+    <div class="ui divider"></div>
+    {% include '@SyliusAdmin/Customer/Show/_breadcrumb.html.twig' %}
+    {% include '@SyliusAdmin/Customer/Show/_content.html.twig' %}
+{% endblock %}
