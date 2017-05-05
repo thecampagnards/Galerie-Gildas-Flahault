@@ -10,9 +10,4 @@ class DefaultController extends Controller
     {
         return $this->render('pages/actualite.html.twig');
     }
-
-    public function parcoursAction()
-    {
-        return $this->render('pages/parcours.html.twig');
-    }
 }
