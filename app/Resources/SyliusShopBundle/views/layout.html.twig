@@ -26,10 +26,10 @@
 <div class="pusher">
     {% block top %}
         <div id="menu" class="ui large sticky inverted stackable menu">
-            {{ sonata_block_render_event('sylius.shop.layout.before_currency_switcher') }}
+            {# sonata_block_render_event('sylius.shop.layout.before_currency_switcher') #}
 
-            {{ render(controller('sylius.controller.shop.currency_switch:renderAction')) }}
-            {{ render(controller('sylius.controller.shop.locale_switch:renderAction')) }}
+            {# render(controller('sylius.controller.shop.currency_switch:renderAction')) #}
+            {# render(controller('sylius.controller.shop.locale_switch:renderAction')) #}
 
             {{ sonata_block_render_event('sylius.shop.layout.before_security_widget') }}
 
@@ -42,7 +42,7 @@
     <div class="ui container">
         {% block header %}
             <header>
-                {% include '@SyliusShop/_header.html.twig' %}
+                {# include '@SyliusShop/_header.html.twig' #}
 
                 {{ sonata_block_render_event('sylius.shop.layout.after_header') }}
 
