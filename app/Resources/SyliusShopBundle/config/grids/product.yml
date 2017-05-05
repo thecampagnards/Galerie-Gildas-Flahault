@@ -17,16 +17,16 @@ sylius_grid:
                             sorting: "expr:service('request_stack').getCurrentRequest().get('sorting', [])"
             sorting:
                 position: asc
-            limits: [9, 18, 27]
+            limits: [6, 9, 18, 27]
             fields:
                 createdAt:
                     type: datetime
                     sortable: ~
                 position:
-                    type: string 
+                    type: string
                     sortable: productTaxon.position
                 name:
-                    type: string 
+                    type: string
                     sortable: translation.name
                 price:
                     type: int
