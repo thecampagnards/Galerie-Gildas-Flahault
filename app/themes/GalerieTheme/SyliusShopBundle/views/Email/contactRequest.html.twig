@@ -1,10 +1,9 @@
-{% extends '@SyliusShop/Email/layout.html.twig' %}
 
 {% block subject %}
     Contact request
 {% endblock %}
 
-{% block body %}
+{% block content %}
     {% autoescape %}
         Message from: {{ data.email }}
         <br/>
@@ -13,3 +12,5 @@
         "{{ data.message }}"
     {% endautoescape %}
 {% endblock %}
+
+{% include 'elements/header.html.twig' with {subject: block('subject'), body: block('content')} %}

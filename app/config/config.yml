@@ -65,3 +65,13 @@ fos_rest:
 sylius_theme:
     sources:
         filesystem: ~
+
+sylius_mailer:
+    sender:
+        name: Galerie Gildas Flahault
+        address: no-reply@galerie-gildas-flahault.com
+
+sylius_grid:
+    grids:
+        sylius_shop_product:
+            limits: [6, 9, 18, 27]

@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block body %}
-    {% set url = order.channel.hostname is not null ? 'http://' ~ order.channel.hostname ~ path('sylius_shop_order_show', {'tokenValue': order.tokenValue, '_locale': order.localeCode}) : url('sylius_shop_order_show', {'tokenValue': order.tokenValue, '_locale': order.localeCode}) %}
+    {% set url = order.channel.hostname is not null ? 'http://' ~ order.channel.hostname ~ path('sylius_shop_order_show', {'tokenValue': order.tokenValue}) : url('sylius_shop_order_show', {'tokenValue': order.tokenValue}) %}
     {% autoescape %}
       <p>Bonjour,</p>
       <p>Votre commande numéro {{ order.number }} a été enregistré.</p>
