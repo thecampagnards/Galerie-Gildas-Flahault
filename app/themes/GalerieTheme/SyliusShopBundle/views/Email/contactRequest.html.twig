@@ -13,4 +13,6 @@
     {% endautoescape %}
 {% endblock %}
 
-{% include 'elements/header.html.twig' with {subject: block('subject'), body: block('content')} %}
+{% block body %}
+  {% include 'elements/header.html.twig' with {subject: block('subject'), content: block('content')} %}
+{% endblock %}
