@@ -1,0 +1,60 @@
+@media screen and (max-width: 1200px) {
+
+  #intro {
+
+    .text, div.photo {
+
+      h1 {
+        font-size: 2em;
+      }
+
+      a {
+        font-size: 2em;
+      }
+
+      small {
+        font-size: 0.9em;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+
+  #intro {
+    #sous-intro {
+      flex-direction: column;
+
+    }
+
+    .text, div.photo {
+      width: 100%;
+      align-self: center;
+    }
+
+    .text {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    div.photo {
+      text-align: center;
+
+      img {
+        width: 70%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+
+  #intro {
+    div.photo {
+
+      img {
+        width: 95%;
+      }
+    }
+  }
+}

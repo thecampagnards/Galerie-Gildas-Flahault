@@ -48,6 +48,7 @@
 
   div.photo {
     width: 65%;
+    align-self: flex-end;
   }
 }
 
@@ -75,3 +76,5 @@
 .desc-cadre {
   border-bottom: 1px solid rgba(34,36,38,.15);
 }
+
+@import "_responsive.scss";
