@@ -1,14 +1,15 @@
+{% extends '@SyliusShop/Email/layout.html.twig' %}
+
 {% block subject %}
-    Order confirmation
+    Votre commande {{ order.number }}
 {% endblock %}
 
 {% block body %}
     {% set url = order.channel.hostname is not null ? 'http://' ~ order.channel.hostname ~ path('sylius_shop_order_show', {'tokenValue': order.tokenValue, '_locale': order.localeCode}) : url('sylius_shop_order_show', {'tokenValue': order.tokenValue, '_locale': order.localeCode}) %}
     {% autoescape %}
-        Your order no. {{ order.number }} has been successfully placed.
-        <br/>
-        To view order or change payment method - please visit {{ url|raw }}
-        <br/><br/>
-        Thank you for shopping at our store!
+      <p>Bonjour,</p>
+      <p>Votre commande numéro {{ order.number }} a été enregistré.</p>
+      <p>Pour voir votre commande ou pour la payer veuillez-vous rendre à cette url : {{ url|raw }}.</p>
+      <p>Merci.</p>
     {% endautoescape %}
 {% endblock %}
