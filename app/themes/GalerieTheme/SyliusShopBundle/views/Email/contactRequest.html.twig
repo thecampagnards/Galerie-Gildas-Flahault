@@ -14,5 +14,5 @@
 {% endblock %}
 
 {% block body %}
-  {% include '@SyliusShop/Email/layout.html.twig' %}
+  {% include '@SyliusShop/Email/layout.html.twig' with {subject: block('subject'), content: block('content')} %}
 {% endblock %}
