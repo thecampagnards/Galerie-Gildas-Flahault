@@ -10,7 +10,7 @@ config = [
     argv.nodeModulesPath || '../../../../../../../node_modules/'
 ];
 
-const RESOURCES_PATH = 'app/Resources'
+const RESOURCES_PATH = 'app/themes/GalerieTheme'
 const COMPILED_PATH = 'web'
 
 gulp.task('admin', function() {
