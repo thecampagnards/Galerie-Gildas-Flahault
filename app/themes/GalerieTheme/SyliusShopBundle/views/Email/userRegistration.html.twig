@@ -4,7 +4,7 @@
     User registration
 {% endblock %}
 
-{% block body %}
+{% block content %}
     {% autoescape %}
         Welcome to our store!
         <br/><br/>
@@ -12,4 +12,8 @@
         <br/>
         Thank you {{ user.username }}.
     {% endautoescape %}
+{% endblock %}
+
+{% block body %}
+  {% include '@SyliusShop/Email/layout.html.twig' %}
 {% endblock %}

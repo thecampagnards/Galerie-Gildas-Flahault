@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Simple Transactional Email</title>
+    <title>{{ subject|raw }}</title>
     <style>
       /* -------------------------------------
           GLOBAL RESETS
@@ -277,7 +277,7 @@
           <div class="content">
 
             <!-- START CENTERED WHITE CONTAINER -->
-            <span class="preheader">{% block subject %}Galerie Gildas Flahault{% endblock %}</span>
+            <span class="preheader">{{ subject|raw }}</span>
             <table class="main">
 
               <!-- START MAIN CONTENT AREA -->
@@ -288,7 +288,7 @@
                       <td>
                         <img src="{{ absolute_url(asset('/images/signature-gildas-flahault.png')) }}"/>
                         <br/><br/>
-                        {% block body %}{% endblock %}
+                        {{ content|raw }}
                       </td>
                     </tr>
                   </table>
@@ -303,7 +303,7 @@
               <table border="0" cellpadding="0" cellspacing="0">
                 <tr>
                   <td class="content-block">
-                    <br><a href="{{ url(sylius_shop_homepage) }}"target="_blank">Voir la boutique</a>
+                    <br><a href="{{ url('sylius_shop_homepage') }}"target="_blank">Voir la boutique</a>
                   </td>
                 </tr>
                 <tr>
