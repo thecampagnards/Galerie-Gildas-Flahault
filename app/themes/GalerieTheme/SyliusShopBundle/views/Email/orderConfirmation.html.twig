@@ -4,7 +4,7 @@
     Votre commande {{ order.number }}
 {% endblock %}
 
-{% block body %}
+{% block content %}
     {% set url = order.channel.hostname is not null ? 'http://' ~ order.channel.hostname ~ path('sylius_shop_order_show', {'tokenValue': order.tokenValue}) : url('sylius_shop_order_show', {'tokenValue': order.tokenValue}) %}
     {% autoescape %}
       <p>Bonjour,</p>
@@ -12,4 +12,8 @@
       <p>Pour voir votre commande ou pour la payer veuillez-vous rendre à cette url : {{ url|raw }}.</p>
       <p>Merci.</p>
     {% endautoescape %}
+{% endblock %}
+
+{% block body %}
+  {% include '@SyliusShop/Email/layout.html.twig' %}
 {% endblock %}
