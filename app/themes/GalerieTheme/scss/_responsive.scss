@@ -66,5 +66,11 @@
         display: none;
       }
     }
+
+    .ui.labeled.icon.button, .ui.labeled.icon.buttons .button {
+      padding-left: 0;
+    }
   }
+
+
 }
