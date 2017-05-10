@@ -13,5 +13,6 @@
 {% endblock %}
 
 {% block javascripts %}
+  {{ parent() }}
   {% include '@SyliusUi/_javascripts.html.twig' with {'path': 'js/main.js'} %}
 {% endblock %}
