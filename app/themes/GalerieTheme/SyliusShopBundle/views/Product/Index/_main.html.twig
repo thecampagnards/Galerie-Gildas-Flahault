@@ -17,7 +17,7 @@
 {% if resources.data|length > 0 %}
     <div class="ui three column stackable grid" id="products">
           <div class="changepage prev">
-              <img src="{{ assets('images/prev.png') }}" alt="Précédent">
+              <img src="{{ asset('images/prev.png') }}" alt="Précédent">
           </div>
         {% for product in resources.data %}
             <div class="column">
@@ -25,7 +25,7 @@
             </div>
         {% endfor %}
           <div class="changepage next">
-              <img src="{{ assets('images/next.png') }}" alt="Suivant">
+              <img src="{{ asset('images/next.png') }}" alt="Suivant">
           </div>
     </div>
     <div class="ui hidden divider"></div>
