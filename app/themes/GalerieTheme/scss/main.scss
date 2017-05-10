@@ -77,4 +77,17 @@
   border-bottom: 1px solid rgba(34,36,38,.15);
 }
 
+.changepage {
+  position: absolute;
+  top: 50%;
+
+  &.prev {
+    left: -5%;
+  }
+
+  &.next {
+    right: -5%;
+  }
+}
+
 @import "_responsive.scss";
