@@ -79,18 +79,18 @@
 
 .changepage {
   position: absolute;
-  top: 37.3%;
+  top: 38.5%;
 
   &.prev {
-    left: -8%;
+    left: -80px;
   }
 
   &.next {
-    right: -8%;
+    right: -80px;
   }
 
   &.disabled {
-    opacity: 0.5;
+    display: none;
   }
 }
 
