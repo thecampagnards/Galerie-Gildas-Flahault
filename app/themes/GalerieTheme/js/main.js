@@ -1,3 +1,6 @@
+/* jslint browser: true */
+/* global  $ */
+
 $(document).ready(function () {
   if ($('.item.prev').hasClass('disabled')) {
     $('.changepage.prev').addClass('disabled')

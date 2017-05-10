@@ -2,7 +2,6 @@ var gulp = require('gulp')
 var sass = require('gulp-sass')
 var chug = require('gulp-chug')
 var argv = require('yargs').argv
-var minify = require('gulp-minify')
 var concat = require('gulp-concat')
 
 var config = [
