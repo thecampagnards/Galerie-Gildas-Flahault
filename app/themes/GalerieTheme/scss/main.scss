@@ -79,7 +79,7 @@
 
 .changepage {
   position: absolute;
-  top: 50%;
+  top: 52.3%;
 
   &.prev {
     left: -5%;
@@ -87,6 +87,10 @@
 
   &.next {
     right: -5%;
+  }
+
+  &.disabled {
+    opacity: 0.5;
   }
 }
 
