@@ -16,11 +16,13 @@
 
 {% if resources.data|length > 0 %}
     <div class="ui three column stackable grid" id="products">
+        <div class="changepage prev"> a </div>
         {% for product in resources.data %}
             <div class="column">
                 {% include '@SyliusShop/Product/_box.html.twig' %}
             </div>
         {% endfor %}
+        <div class="changepage next"> b </div>
     </div>
     <div class="ui hidden divider"></div>
 
