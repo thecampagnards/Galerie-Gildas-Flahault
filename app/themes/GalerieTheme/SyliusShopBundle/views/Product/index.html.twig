@@ -11,3 +11,7 @@
     </div>
 </div>
 {% endblock %}
+
+{% block javascripts %}
+  {% include '@SyliusUi/_javascripts.html.twig' with {'path': 'js/main.js'} %}
+{% endblock %}
