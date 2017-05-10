@@ -16,21 +16,21 @@
 
 {% if resources.data|length > 0 %}
     <div class="ui three column stackable grid" id="products">
-      <div class="changepage prev {{ pagerfanta.hasPreviousPage }}">
-        {% if pagerfanta.haveToPaginate() %}
-          <a href="{{ pagerfanta.getPreviousPage }}"><</a>
+        {% if resources.data.hasPreviousPage() %}
+          <div class="changepage prev">
+              <a href="{{ resources.data.getPreviousPage() }}"><</a>
+          </div>
         {% endif %}
-      </div>
         {% for product in resources.data %}
             <div class="column">
                 {% include '@SyliusShop/Product/_box.html.twig' %}
             </div>
         {% endfor %}
-      <div class="changepage next {{ pagerfanta.hasNextPage }}">
-        {% if pagerfanta.haveToPaginate() %}
-          <a href="{{ pagerfanta.getNextPage }}">></a>
+        {% if resources.data.hasNextPage() %}
+          <div class="changepage next">
+              <a href="{{ resources.data.getNextPage() }}">></a>
+          </div>
         {% endif %}
-      </div>
     </div>
     <div class="ui hidden divider"></div>
 
