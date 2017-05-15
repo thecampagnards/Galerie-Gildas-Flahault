@@ -1,0 +1,7 @@
+{% if data.media is not empty %}
+    {% set path = asset(data.getWebPath) %}
+{% else %}
+    {% set path = 'http://placehold.it/50x50' %}
+{% endif %}
+
+<img height="50px" width="50px" src="{{ path }}" alt="" class="ui bordered image" />

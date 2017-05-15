@@ -1,0 +1,11 @@
+services:
+    app.listener.admin.menu_builder:
+        class: AppBundle\Menu\AdminMenuListener
+        tags:
+            - { name: kernel.event_listener, event: sylius.menu.admin.main, method: addAdminMenuItems }
+
+    app.form.type.actualite:
+        class: AppBundle\Form\Type\ActualiteType
+        tags:
+            - { name: form.type, alias: app_form_actualite }
+        arguments: ['@doctrine', '@sylius.context.locale']

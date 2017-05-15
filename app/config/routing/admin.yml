@@ -1,0 +1,3 @@
+# app/config/routing/admin.yml
+app_admin_actualite:
+    resource: 'admin/actualite.yml'

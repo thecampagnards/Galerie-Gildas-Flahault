@@ -1,0 +1,3 @@
+# app/config/grids/grids.yml
+imports:
+    - { resource: 'admin/actualite.yml' }

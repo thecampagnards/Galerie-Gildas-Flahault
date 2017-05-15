@@ -9,12 +9,18 @@ imports:
 
     - { resource: "parameters.yml" }
     - { resource: "security.yml" }
+    - { resource: "services.yml" }
+    - { resource: "resources.yml" }
+    - { resource: "grids/grids.yml" }
 
 parameters:
     locale: fr_FR
 
 framework:
-    translator: { fallbacks: ["%locale%"] }
+    translator:
+      fallbacks: ["%locale%"]
+      paths:
+        - '%kernel.root_dir%/config/translations'
     secret: "%secret%"
     router:
         resource: "%kernel.root_dir%/config/routing.yml"

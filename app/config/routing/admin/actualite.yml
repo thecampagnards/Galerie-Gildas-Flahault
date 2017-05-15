@@ -1,0 +1,14 @@
+app_admin_actualite:
+    resource: |
+        alias: app.actualite
+        section: admin
+        templates: SyliusAdminBundle:Crud
+        redirect: update
+        grid: app_admin_actualite
+        vars:
+            all:
+                header: Actualité
+                subheader: Actualité
+            index:
+                icon: 'newspaper'
+    type: sylius.resource

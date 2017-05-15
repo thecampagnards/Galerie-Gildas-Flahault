@@ -1,0 +1,8 @@
+# app/config/resources.yml
+sylius_resource:
+    resources:
+        app.actualite:
+            driver: doctrine/orm # You can use also different driver here
+            classes:
+                model: AppBundle\Entity\Actualite
+                form: AppBundle\Form\Type\ActualiteType

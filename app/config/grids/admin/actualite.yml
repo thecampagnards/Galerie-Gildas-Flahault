@@ -1,0 +1,33 @@
+# app/config/grids/admin/actualite.yml
+sylius_grid:
+    grids:
+        app_admin_actualite:
+            driver:
+                name: doctrine/orm
+                options:
+                    class: AppBundle\Entity\Actualite
+            fields:
+                titre:
+                    type: string
+                    label: Titre
+                date:
+                    type: datetime
+                    label: Date de création
+                description:
+                    type: string
+                    label: Description
+                image:
+                    type: twig
+                    label: sylius.ui.image
+                    path: .
+                    options:
+                        template: "::admin/adminImage.html.twig"
+            actions:
+                main:
+                    create:
+                        type: create
+                item:
+                    update:
+                        type: update
+                    delete:
+                        type: delete
