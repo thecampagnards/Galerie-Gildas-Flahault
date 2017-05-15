@@ -20,7 +20,7 @@ framework:
     translator:
       fallbacks: ["%locale%"]
       paths:
-        - '%kernel.root_dir%/config/translations'
+        - '%kernel.root_dir%/Resources/translations'
     secret: "%secret%"
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
@@ -81,3 +81,7 @@ sylius_grid:
     grids:
         sylius_shop_product:
             limits: [6, 9, 18, 27]
+
+twig:
+    form_themes:
+        - 'form/fields.html.twig'

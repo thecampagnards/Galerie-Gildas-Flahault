@@ -19,7 +19,7 @@ final class AdminMenuListener
         ;
 
         $newSubmenu
-            ->addChild('new-subitem')
+            ->addChild('new-subitem', ['route' => 'app_admin_actualite_index'])
             ->setLabel('Actualités')
             ->setLabelAttribute('icon', 'newspaper')
         ;

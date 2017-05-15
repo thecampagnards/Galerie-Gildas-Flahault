@@ -10,6 +10,7 @@ use Symfony\Component\Form\FormEvent;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
+use AppBundle\Form\Type\ImageType;
 
 final class ActualiteType extends AbstractType
 {
@@ -20,10 +21,6 @@ final class ActualiteType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $actualite = $builder->getData();
-        $imageLabel = '';
-        if (!empty($actualite->getMedia()) && $webPath = $actualite->getWebPath()) {
-          $imageLabel = ' <img src="'.$webPath.'" class="admin-preview" height="300" />';
-        }
 
         $builder->add('titre', TextType::class, [
             'label' => 'Titre',
@@ -33,9 +30,11 @@ final class ActualiteType extends AbstractType
             'label' => 'Description',
         ]);
 
-        $builder->add('file', FileType::class, [
+        $builder->add('file', ImageType::class, [
             'required' => false,
-            'label' => 'Image'.$imageLabel,
+            'label' => 'Image',
+            'block_name' => 'image_widget',
+            'attr' => ['image' => !empty($actualite->getMedia()) ? $actualite->getWebPath() : null]
         ]);
 
         $builder->addEventListener(FormEvents::SUBMIT, function (FormEvent $event) {
