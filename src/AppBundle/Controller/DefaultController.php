@@ -8,6 +8,10 @@ class DefaultController extends Controller
 {
     public function actualiteAction()
     {
-        return $this->render('pages/actualite.html.twig');
+        $actualites = $this
+              ->getDoctrine()
+              ->getManager()
+              ->getRepository('AppBundle:Actualite')->findAll();
+        return $this->render('pages/actualite.html.twig', array('actualites' => $actualites));
     }
 }
