@@ -79,18 +79,33 @@
 
 .changepage {
   position: absolute;
-  top: 52.3%;
+  top: 38.5%;
 
   &.prev {
-    left: -5%;
+    left: -80px;
   }
 
   &.next {
-    right: -5%;
+    right: -80px;
   }
 
   &.disabled {
-    opacity: 0.5;
+    display: none;
+  }
+}
+
+.actualite {
+  padding: 30px 0;
+  border-bottom: 1px solid rgba(34, 36, 38, 0.15);
+
+  div.img {
+    padding: 0 10px;
+    box-sizing: border-box;
+    text-align: center;
+
+    img {
+      width: 100%;
+    }
   }
 }
 
