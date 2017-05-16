@@ -10,11 +10,11 @@
     <article class="actualite">
         <h3>{{ actualite.titre }} <small>{{ actualite.date|date('d-m-Y') }}</small></h3>
         <p>
-          <div class="img">
           {% if actualite.getWebPath %}
-            <img src="{{ asset(actualite.getWebPath) }}" alt="Photo Gildas Flahault" class="photo">
+            <div class="img">
+                <img src="{{ asset(actualite.getWebPath) }}" alt="Photo Gildas Flahault" class="photo">
+            </div>
           {% endif %}
-          </div>
           {{ actualite.description|raw }}
         </p>
     </article>
