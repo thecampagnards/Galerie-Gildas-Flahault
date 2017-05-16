@@ -18,3 +18,4 @@ sylius:
     forgot_password: Mot de passe oublié ?
     have_an_account_already: Vous avez déjà un compte ?
     your_store: Galerie
+    sign_in: Connexion
