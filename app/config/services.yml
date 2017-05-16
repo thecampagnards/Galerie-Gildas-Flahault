@@ -9,3 +9,8 @@ services:
         tags:
             - { name: form.type, alias: app_form_actualite }
         arguments: ['@doctrine', '@sylius.context.locale']
+
+    app.form.type.image:
+        class: AppBundle\Form\Type\ImageType
+        tags:
+            - { name: form.type, alias: image }

@@ -1,0 +1,12 @@
+
+{% block image_widget %}
+  {% spaceless %}
+  <div>
+      {% if form.vars.attr.image is not empty %}
+        <img src="{{ asset(form.vars.attr.image) }}" class="admin-preview" height="300" />
+      {% endif %}
+      {{ form_errors(form) }}
+      {{ form_widget(form) }}
+  </div>
+  {% endspaceless %}
+{% endblock %}

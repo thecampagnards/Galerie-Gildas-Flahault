@@ -1,0 +1,6 @@
+app:
+  ui:
+    actualites: Actualités
+    actualite: Actualité
+    edit_actualite: Editer une actualité
+    add_actualite: Ajouter une actualité
