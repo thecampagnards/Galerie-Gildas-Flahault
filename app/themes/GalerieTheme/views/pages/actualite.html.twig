@@ -10,7 +10,7 @@
     <article class="actualite">
         <h3>{{ actualite.titre }} <small>{{ actualite.date|date('d-m-Y') }}</small></h3>
         <p>
-          <div class="img" style="width: 40%; float: right">
+          <div class="img">
           {% if actualite.getWebPath %}
             <img src="{{ asset(actualite.getWebPath) }}" alt="Photo Gildas Flahault" class="photo">
           {% endif %}
@@ -21,7 +21,7 @@
     {% endfor %}
 
 
-    <article class="actualite">
+    {# <article class="actualite">
         <h3>Ouverture de la galerie en ligne de Gildas Flahault <small>32/13/2017</small></h3>
         <p>
           <div class="img" style="width: 40%; float: right">
@@ -37,6 +37,6 @@
 
         <br><br>Quod opera consulta cogitabatur astute, ut hoc insidiarum genere Galli periret avunculus, ne eum ut praepotens acueret in fiduciam exitiosa coeptantem. verum navata est opera diligens hocque dilato Eusebius praepositus cubiculi missus est Cabillona aurum secum perferens, quo per turbulentos seditionum concitores occultius distributo et tumor consenuit militum et salus est in tuto locata praefecti. deinde cibo abunde perlato castra die praedicto sunt mota.
         </p>
-    </article>
+    </article> #}
 
 {% endblock %}
